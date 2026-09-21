@@ -1,5 +1,4 @@
-FROM nginx
-EXPOSE 80
-MAINTAINER Karthik
-LABEL novacart page
-COPY . /usr/share/nginx/html
+FROM python:3
+WORKDIR /usr/src/app
+COPY . .
+CMD [ "python", "helloworld.py" ]
